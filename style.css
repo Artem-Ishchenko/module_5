@@ -8,7 +8,7 @@ body, html {
 сами они почему-то выключаются через раз;
 Отключаю декоративную прозрачность в конце у свайпера */
 @media (min-width: 768px) {
-    .image-slider .swiper-pagination-bullet {
+    .block-repair-slider .swiper-pagination-bullet {
         display: none;
     }
     .wrapper-transparent {
@@ -41,47 +41,31 @@ body, html {
     letter-spacing: -0.2px;
     margin: 0;
 }
-
-
-
-/* Для планшета и Пк */
-
-
-
-
-
-
-
 /* Для мобилки */
 /* Слайдер - стилизация */
-.image-slider__wrapper {
+.block-repair-slider__wrapper {
     margin-left: 16px;
 }
 
-.image-slider__image {
+.block-repair-slider__block {
     display: flex;
     justify-content: center;
     align-self: center;
-}
-/* !!!! поменяй img на класс */
-.image-slider__image > img {  
-    margin: auto auto auto 16px;
-}
-.image-slider__slide {
-    width: auto;
-    margin-right: 16px;
-}
-
-.image-slider__image {
     border: 1px solid #EAEAEA;
     background: #FFFFFF;
     border-radius: 10px;
     width: 240px;
     height: 72px;
     box-sizing: border-box;
-    
 }
-.image-slider {
+.block-repair-slider__block > img {  
+    margin: auto auto auto 16px;
+}
+.block-repair-slider__slide {
+    width: auto;
+    margin-right: 16px;
+}
+.block-repair-slider {
     overflow: hidden;
 }
 /* Добавляет прозрачности справа свайпера 
@@ -95,9 +79,8 @@ body, html {
     right: 0;  
     z-index: 10;
 }
-
 /* Кнопка */
-.image-slider__button {
+.block-repair-slider__button {
     margin: auto 16px auto auto;
     width: 40px;
     height: 40px;
@@ -107,11 +90,10 @@ body, html {
     background: transparent;
     text-align: center;
 }
-.image-slider__button:hover {
+.block-repair-slider__button:hover {
     background-color: pink;
     transition: background 0.5s ease;
 }
-
 /* Стилизация кнопки на CSS */
 .button__part-one-line {
     width: 7px;
@@ -136,67 +118,58 @@ body, html {
     margin-left: auto;
     margin-right: auto;
 }
-
-
 /* Булеты в слайдере */
 .swiper-pagination-bullets {
     position: static;
     margin-top: 16px;
 }
-
 .swiper-pagination-bullet {
     background-color: grey;
     width: 12px;
     height: 12px;
 }
-
-
-
+/* меняю стили отступов и т.п. 
+в зависимости от разрешения */
 @media (min-width: 768px) {
-    .image-slider {
+    .block-repair-slider {
         margin: 24px;
         margin-right: 24px;
         margin-left: 24px;
     }
-
-    .image-slider__wrapper {
+    .block-repair-slider__wrapper {
         display: flex;
         flex-flow: row wrap;
         justify-content: start;
         gap: 24px;
         margin: 0;
     }
-
-    .image-slider__slide {
+    .block-repair-slider__slide {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .image-slider__image {
+    .block-repair-slider__block {
         width: 224px;
     }
 }
-
 @media (min-width: 1120px) {
     .block-repair .block-repair__header {
         padding-left: 32px;
     }
-
-    .image-slider {
+    .block-repair-slider {
         margin-right: 32px;
         margin-left: 32px;
         padding-bottom: 0;
     }
-    .image-slider__image {
+    .block-repair-slider__block {
         width: 240px;
         margin: 0;
     }
-    .image-slider__wrapper {
+    .block-repair-slider__wrapper {
         row-gap: 16px;
         column-gap: 32px;
     }
 }
-
 /* Кнопка ЕЩЕ */
 @media (max-width: 767px) {
     .block-repair .block-repair__button-next{
@@ -213,7 +186,6 @@ body, html {
         display: none;
     }
 }
-
 .block-repair__button-next {
     width: 134px;
     height: 24px ;
@@ -235,7 +207,6 @@ body, html {
     color: gray;
     transition: color 0.5s ease;
 }
-
 .block-repair__arrow {
     width: 24px;
     height: 24px;
@@ -260,7 +231,7 @@ body, html {
     border-width: 0 2px 2px 0;
     rotate: 45deg;
 }
-
+/* вспомогательный класс */
 .disable {
     display: none;
 }
