@@ -1,0 +1,266 @@
+body, html {
+    font-family: 'TT Lakes', Times, serif;
+    padding: 0;
+    margin: 0;
+    background-color: #F8F8F8;
+}
+/* Отключаю булеты вручную, потому что 
+сами они почему-то выключаются через раз;
+Отключаю декоративную прозрачность в конце у свайпера */
+@media (min-width: 768px) {
+    .image-slider .swiper-pagination-bullet {
+        display: none;
+    }
+    .wrapper-transparent {
+        display: none;
+    }
+    /* меняю хедер при достижении определенной высоты */
+    .block-repair .block-repair__header {
+        height: 56px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+    }
+}
+
+/* Хедер */
+.block-repair__header {
+    height: 80px;
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #D9FFF5;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+.block-repair__header-text {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin: 0;
+}
+
+
+
+/* Для планшета и Пк */
+
+
+
+
+
+
+
+/* Для мобилки */
+/* Слайдер - стилизация */
+.image-slider__wrapper {
+    margin-left: 16px;
+}
+
+.image-slider__image {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+/* !!!! поменяй img на класс */
+.image-slider__image > img {  
+    margin: auto auto auto 16px;
+}
+.image-slider__slide {
+    width: auto;
+    margin-right: 16px;
+}
+
+.image-slider__image {
+    border: 1px solid #EAEAEA;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 240px;
+    height: 72px;
+    box-sizing: border-box;
+    
+}
+.image-slider {
+    overflow: hidden;
+}
+/* Добавляет прозрачности справа свайпера 
+и убираю его при достижении определенной ширины выше*/
+.wrapper-transparent {
+    width: 24px;
+    height: 72px;
+    background-image: linear-gradient(to right, transparent, #F8F8F8);
+    position: absolute;
+    top: 96px;
+    right: 0;  
+    z-index: 10;
+}
+
+/* Кнопка */
+.image-slider__button {
+    margin: auto 16px auto auto;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: transparent;
+    text-align: center;
+}
+.image-slider__button:hover {
+    background-color: pink;
+    transition: background 0.5s ease;
+}
+
+/* Стилизация кнопки на CSS */
+.button__part-one-line {
+    width: 7px;
+    height: 2px;
+    background: #FF3E79; 
+    border-radius: 2px;
+    position: relative;
+    rotate: 45deg;
+    top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button__part-two-line {
+    width: 7px;
+    height: 2px;
+    background: #FF3E79; 
+    border-radius: 2px;
+    position: relative;
+    rotate: -45deg;
+    top: 1px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Булеты в слайдере */
+.swiper-pagination-bullets {
+    position: static;
+    margin-top: 16px;
+}
+
+.swiper-pagination-bullet {
+    background-color: grey;
+    width: 12px;
+    height: 12px;
+}
+
+
+
+@media (min-width: 768px) {
+    .image-slider {
+        margin: 24px;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+    .image-slider__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+        gap: 24px;
+        margin: 0;
+    }
+
+    .image-slider__slide {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .image-slider__image {
+        width: 224px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .block-repair .block-repair__header {
+        padding-left: 32px;
+    }
+
+    .image-slider {
+        margin-right: 32px;
+        margin-left: 32px;
+        padding-bottom: 0;
+    }
+    .image-slider__image {
+        width: 240px;
+        margin: 0;
+    }
+    .image-slider__wrapper {
+        row-gap: 16px;
+        column-gap: 32px;
+    }
+}
+
+/* Кнопка ЕЩЕ */
+@media (max-width: 767px) {
+    .block-repair .block-repair__button-next{
+        display: none;
+    }
+}
+@media (min-width: 1120px) {
+    .block-repair .block-repair__button-next{
+        margin-left: 32px;
+    }
+}
+@media (min-width: 1664px) {
+    .block-repair .block-repair__button-next {
+        display: none;
+    }
+}
+
+.block-repair__button-next {
+    width: 134px;
+    height: 24px ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    margin-left: 24px;
+}
+.block-repair__button-next:hover {
+    color: gray;
+    transition: color 0.5s ease;
+}
+
+.block-repair__arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.block-repair__arrow-part-one {
+    width: 4px;
+    height: 4px;
+    border: 2px solid #41F6D7;
+    border-radius: 20%;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+}
+.block-repair__arrow-part-two {
+    width: 4px;
+    height: 4px;
+    border: 2px solid #41F6D7;
+    border-radius: 20%;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+}
+
+.disable {
+    display: none;
+}
